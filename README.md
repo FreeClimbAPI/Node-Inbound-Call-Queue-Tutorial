@@ -1,15 +1,15 @@
 # Node Inbound Call Queue Tutorial
 
-This project serves as a guide to help you build an application with Persephony. Specifically, the project will:
+This project serves as a guide to help you build an application with FreeClimb. Specifically, the project will:
 
 - Add a Caller to a queue
 - Play audio to the caller in the queue
 - Get digits from the caller
 - Exit the queue when a key is pressed
 
-## Setting up your new app within your Persephony account
+## Setting up your new app within your FreeClimb account
 
-To get started using a persephony account, follow the instructions [here](https://persephony-docs.readme.io/docs/getting-started-with-persephony).
+To get started using a FreeClimb account, follow the instructions [here](https://persephony-docs.readme.io/docs/getting-started-with-persephony).
 
 ## Setting up the Inbound Call Queue Tutorial
 
