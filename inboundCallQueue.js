@@ -7,7 +7,7 @@ const app = express()
 app.use(bodyParser.json())
 // Where your app is hosted ex. www.myapp.com
 const host = process.env.HOST
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 80
 // your freeclimb API key (available in the Dashboard) - be sure to set up environment variables to store these values
 const accountId = process.env.ACCOUNT_ID
 const authToken = process.env.AUTH_TOKEN
@@ -33,9 +33,8 @@ app.post('/inboundCallWait', (req, res) => {
 
   // Create PerCL say script
   const say = freeclimb.percl.say('Press any key to exit queue.')
-  const play = freeclimb.percl.play(`${host}/getAudio`)
   // Create options for getDigits script
-  const prompts = freeclimb.percl.build(say, play)
+  const prompts = freeclimb.percl.build(say)
   const options = {
     prompts,
     maxDigits: 1,
@@ -67,11 +66,6 @@ app.post('/inboundCallAction', (req, res) => {
   const say = freeclimb.percl.say('Call exited queue')
   const percl = freeclimb.percl.build(say)
   res.status(200).json(percl)
-})
-
-app.get('/getAudio', (req, res) => {
-  const file = `${__dirname}/elevator_music.wav`
-  res.download(file)
 })
 
 // Specify this route with 'Status Callback URL' in App Config
