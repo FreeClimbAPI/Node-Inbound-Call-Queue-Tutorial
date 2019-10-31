@@ -3,7 +3,6 @@
 This project serves as a guide to help you build an application with FreeClimb. Specifically, the project will:
 
 - Add a Caller to a queue
-- Play audio to the caller in the queue
 - Get digits from the caller
 - Exit the queue when a key is pressed
 
